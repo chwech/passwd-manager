@@ -1,0 +1,23 @@
+{
+	"name": "extension",
+	"version": "1.0.0",
+	"manifest_version": 2,	
+	"description": "first extension",
+	"browser_action": {
+		"default_icon": "icon.png", 
+		"default_title": "自动填充密码插件",
+		"default_popup": "popup.html"
+	},
+	"omnibox": { 
+		"keyword" : "http" 
+	},
+	"options_page": "options.html",
+	"icons": {
+		"16": "icon1.png"
+	},
+	"permissions": [
+		"contextMenus",
+		"notifications",
+		"http://api.flickr.com/"
+	]
+}
