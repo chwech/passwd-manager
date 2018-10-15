@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  php7.2-apache:
+    image: php:7.2-apache
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql
+
+networks:
