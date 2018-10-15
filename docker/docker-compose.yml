@@ -5,8 +5,16 @@ services:
     image: php:7.2-apache
     depends_on:
       - mysql
+    volumes:
+      - src:/home/chwech/passwd-manager/tp5
 
   mysql:
     image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd-admin
 
 networks:
+
+volumes:
+  src:
