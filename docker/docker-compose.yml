@@ -7,6 +7,8 @@ services:
       - mysql
     volumes:
       - src:/home/chwech/passwd-manager/tp5
+    ports:
+      - "8081:80"
 
   mysql:
     image: mysql
