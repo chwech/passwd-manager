@@ -1,16 +1,21 @@
 version: "3"
 
 services:
-  php7.2-apache:
+  apache:
+    build:
+      context: .
+      dockerfile: ./httpd/Dockerfile
+    volumes:
+      - "/home/chwech/passwd-manager/tp5:/usr/local/apache2/htdocs/"
+    ports:
+      - "8081:80"
+  
+  php:
     build: 
       context: .
       dockerfile: Dockerfile
     depends_on:
       - mysql
-    volumes:
-      - "/home/chwech/passwd-manager/tp5:/var/www/html"
-    ports:
-      - "8081:80"
 
   mysql:
     image: mysql
