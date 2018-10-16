@@ -1,4 +1,5 @@
 FROM php:7.2-apache
 RUN docker-php-source extract \
-    # do important things \
-    && docker-php-source delete
+  docker-php-ext-configure extension=php_pdo_mysql.dll \
+  # do important things \
+  && docker-php-source delete
