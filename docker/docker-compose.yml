@@ -1,20 +1,14 @@
 version: "3"
 
 services:
-  php7.2-apache:
+  lamp:
     build: 
       context: .
       dockerfile: Dockerfile
     depends_on:
       - mysql
     volumes:
-      - "/home/chwech/passwd-manager/tp5:/var/www/html"
+      - "/home/chwech/passwd-manager/tp5:/app"
+      - "/home/chwech/passwd-manager/mysql-data:/var/lib/mysql"
     ports:
       - "8081:80"
-      
-  mysql:
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: pwd-admin
-      MYSQL_DATABASE: passwd-manager

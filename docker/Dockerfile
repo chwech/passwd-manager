@@ -1,2 +1,2 @@
-FROM php:7.2-apache
-RUN docker-php-ext-install mysqli
+FROM mattrayner/lamp:latest-1604
+CMD ["/run.sh"]
