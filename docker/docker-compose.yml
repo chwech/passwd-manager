@@ -5,8 +5,6 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      - mysql
     volumes:
       - "/home/chwech/passwd-manager/tp5:/app"
       - "/home/chwech/passwd-manager/mysql-data:/var/lib/mysql"
