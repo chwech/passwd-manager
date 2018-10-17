@@ -7,5 +7,6 @@ class Index
     {
         $data = ['id' => 1, 'username' => 'chwech', 'password' => 'admin'];
         Db::table('pm_user')->insert($data);
+	// phpinfo();
     }
 }
