@@ -9,4 +9,5 @@ services:
       - "/home/chwech/passwd-manager/tp5:/app"
       - "/home/chwech/passwd-manager/mysql-data:/var/lib/mysql"
     ports:
+      - "3306:3306"
       - "8081:80"
