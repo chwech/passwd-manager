@@ -6,3 +6,4 @@
   - [x] 可以使用phpMyAdmin访问，账号admin
   - [ ] 尝试使用navicat连接
 - [ ] 登录/注册页面
+  - [ ] user表设计
