@@ -1,6 +1,9 @@
 # 创建数据库
 CREATE DATABASE IF NOT EXISTS password_manager CHARACTER SET utf8;
 
+# 选择数据库
+USE password_manager;
+
 # 创建用户表
 CREATE TABLE IF NOT EXISTS pm_user (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
