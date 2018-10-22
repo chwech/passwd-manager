@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS pm_user (
   register_time TIMESTAMP DEFAULT NOW() COMMENT '注册时间',
   register_ip INT UNSIGNED COMMENT '注册ip',
   login_ip INT UNSIGNED COMMENT '登录ip',
-  login_time TIMESTAMP COMMENT '登录时间'
+  login_time TIMESTAMP NULL COMMENT '登录时间'
 );
