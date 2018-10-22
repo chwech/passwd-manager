@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS pm_user (
   avatar VARCHAR(255) COMMENT '头像',
   status TINYINT DEFAULT 1 COMMENT '状态，0禁用，1正常',
   register_time TIMESTAMP DEFAULT NOW() COMMENT '注册时间',
-  register_ip UNSIGNED INT COMMENT '注册ip',
-  login_ip UNSIGNED INT COMMENT '登录ip',
+  register_ip INT UNSIGNED COMMENT '注册ip',
+  login_ip INT UNSIGNED COMMENT '登录ip',
   login_time TIMESTAMP COMMENT '登录时间'
 );
