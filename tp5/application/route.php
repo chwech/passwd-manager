@@ -23,3 +23,6 @@
 use think\Route;
 // 注册路由到index模块的News控制器的read操作
 Route::rule('tp5/hello','index/Index/index');
+
+// 添加用户
+Route::get('/user', 'api/v1.User/addUser');
