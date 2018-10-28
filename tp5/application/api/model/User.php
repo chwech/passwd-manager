@@ -9,11 +9,12 @@ class User extends Model
 {
     public static function addUser()
     {
-        try {
-            1 / 0;
-        } catch (Exception $e) {
-            //
-            new UserException();
-        }
+        // try {
+        //     1 / 0;
+        // } catch (Exception $e) {
+            
+        //     // throw new UserException();
+        //     throw $e;
+        // }
     }
 }

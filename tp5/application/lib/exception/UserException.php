@@ -7,7 +7,7 @@ use think\Request;
 
 class UserException extends BaseException
 {
-    public code;
-    public errorCode;
-    public msg;
+    public $code = 401;
+    public $errorCode = 10001;
+    public $msg = '参数错误';
 }

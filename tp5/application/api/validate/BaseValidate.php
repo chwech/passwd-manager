@@ -4,6 +4,7 @@ namespace app\api\validate;
 use think\Validate;
 use think\Exception;
 use think\Request;
+use app\lib\exception\ParameterException;
 
 class BaseValidate extends Validate
 {
@@ -11,14 +12,16 @@ class BaseValidate extends Validate
     {
         $request = Request::instance();
         $params = $request -> param();
-        $result = $this -> check($params);
+        $result = $this -> batch() -> check($params);
     
         if (!$result) {
-          $error = $this -> error;
-          throw new Exception($error);
+            $e = new ParameterException([
+              'msg' => $this -> error
+            ]);
+            throw $e;
         }
         else {
-          return true;
+            return true;
         }
     }
 }
