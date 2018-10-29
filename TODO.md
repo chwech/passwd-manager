@@ -9,4 +9,5 @@
   - [x] user表设计
   - [ ] 注册接口
 - [ ] 拓展fetch封装,增加put,delete请求,增加拦截器
-- [ ] thinkphp全局异常处理
+- [x] thinkphp全局异常处理, 日志处理
+- [ ] 生产环境路径改写, 隐藏掉`pulbic/index.php`
