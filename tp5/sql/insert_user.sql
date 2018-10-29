@@ -1,0 +1,1 @@
+﻿INSERT INTO pm_user (username, password) values ('chwech', MD5('admin123'));
