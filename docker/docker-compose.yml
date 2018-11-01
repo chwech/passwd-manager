@@ -16,3 +16,5 @@ services:
     image: "nginx"
     ports: 
       - "80:80"
+    volumes:
+      - "/home/chwech/passwd-manager/docker/conf.d:/etc/nginx/conf.d"
