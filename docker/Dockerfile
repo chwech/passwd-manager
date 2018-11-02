@@ -1,3 +1,5 @@
 FROM mattrayner/lamp:latest-1604
 COPY mysqld.cnf /etc/mysql/mysql.conf.d/
+COPY sites.conf /etc/apache2/sites_available
+RUN ["/bin/bash", "ln", "-s", "/etc/apache2/sites_available/sites.conf", "/etc/apache2/sites_enabled/sites.conf"]
 CMD ["/run.sh"]
