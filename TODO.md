@@ -8,8 +8,9 @@
 - [ ] 登录/注册页面
   - [x] user表设计
   - [ ] 注册接口
+  - [ ] 登录接口
 - [ ] 拓展fetch封装,增加put,delete请求,增加拦截器
 - [x] thinkphp全局异常处理, 日志处理
-- [ ] 生产环境路径改写, 隐藏掉`pulbic/index.php`
+- [x] 生产环境路径改写, 隐藏掉`pulbic/index.php`
   - [x] 使用nginx作反向代理服务器
   - [ ] 不要暴露lamp的端口出来, lamp只能通过nginx访问
