@@ -4,7 +4,8 @@ namespace app\api\validate;
 class UserValidate extends BaseValidate
 {
     protected $rule = [
-        'name' => 'require|max:6',
-        'age'  => 'number|between:1,120',
+        'username' => 'require|chsAlphaNum|max:32',
+        'password'  => 'require|alphaNum|max:32',
+        'register_ip' => 'require|ip'
     ];
 }

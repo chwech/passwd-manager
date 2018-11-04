@@ -25,4 +25,4 @@ use think\Route;
 Route::rule('tp5/hello','index/Index/index');
 
 // 添加用户
-Route::get('/user', 'api/v1.User/addUser');
+Route::post('/user', 'api/v1.User/addUser');

@@ -18,7 +18,7 @@ class User
         (new UserValidate()) -> goCheck();
 
         // 业务逻辑
-        $result = UserModel::addUser();
-        return json($result);
+        $result = UserModel::create($request -> param());
+        return json($request);
     }
 }
