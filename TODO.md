@@ -14,3 +14,4 @@
 - [x] 生产环境路径改写, 隐藏掉`pulbic/index.php`
   - [x] 使用nginx作反向代理服务器
   - [x] 不要暴露lamp的端口出来, lamp只能通过nginx访问
+- [ ] 集成jwt扩展库lcobucci/jwt
