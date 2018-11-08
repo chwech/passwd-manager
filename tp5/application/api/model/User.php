@@ -9,7 +9,7 @@ use think\Request;
 class User extends Model
 {
     // 数据完成
-    protected $insert = ['ip'];
+    protected $insert = ['register_ip'];
 
     public static function addUser()
     {
