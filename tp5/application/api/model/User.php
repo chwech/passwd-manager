@@ -23,7 +23,7 @@ class User extends Model
     /**
      * 修改器，ip转换成长整型
      */
-    protected function setIpAttr()
+    protected function setRegisterIpAttr()
     {
         $request = Request::instance();
         $register_ip = $request -> param('register_ip');
