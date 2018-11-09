@@ -23,7 +23,7 @@ class User
         
         if ($result) {
             return [
-                "errorCode" => 10000,
+                "errorCode" => 20000,
                 "msg" => "注册成功",
                 "data" => []
             ];

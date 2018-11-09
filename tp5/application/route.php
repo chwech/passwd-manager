@@ -26,3 +26,6 @@ Route::rule('tp5/hello','index/Index/index');
 
 // 添加用户
 Route::post('/user', 'api/v1.User/addUser');
+
+// 获取jwt-token
+Route::get('/token', 'api/v1.Token/getToken');
