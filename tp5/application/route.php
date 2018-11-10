@@ -29,3 +29,5 @@ Route::post('/user', 'api/v1.User/addUser');
 
 // 获取jwt-token
 Route::get('/token', 'api/v1.Token/getToken');
+Route::get('/', 'index/Index/index');
+// Route::miss('/');

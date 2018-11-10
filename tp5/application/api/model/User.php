@@ -4,6 +4,7 @@ namespace app\api\model;
 use think\Model;
 use app\lib\exception\ParameterException;
 use think\Db;
+use think\Request;
 
 class User extends Model
 {
