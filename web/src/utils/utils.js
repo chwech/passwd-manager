@@ -18,3 +18,18 @@ export function transferUrl (url, params) {
   }
   return url
 }
+
+/**
+ * 将一个对象序列化成查询字符串
+ * @export
+ * @param {Object} params
+ * @param {Object} [sep='&'] 键值对之间的分隔符 
+ * @returns {String} 返回查询字符串，如：'?key1=value1&key2=value2'
+ */
+export function serializeQueryStr (params, sep = '&') {
+  let queryString = '?'
+  for (let [key, value] of Object.entries(params)) {
+    queryString += `${encodeURIComponent(key)}=${encodeURIComponent(value)}${sep}`
+  }
+  return queryString
+}
