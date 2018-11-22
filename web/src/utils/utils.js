@@ -28,8 +28,10 @@ export function transferUrl (url, params) {
  */
 export function serializeQueryStr (params, sep = '&') {
   let queryString = '?'
+  let paramsArray = []
   for (let [key, value] of Object.entries(params)) {
-    queryString += `${encodeURIComponent(key)}=${encodeURIComponent(value)}${sep}`
+    paramsArray.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
   }
+  queryString += paramsArray.join(sep)
   return queryString
 }
