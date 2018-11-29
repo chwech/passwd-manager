@@ -5,21 +5,21 @@ import {
   Button
 } from 'antd';
 import './App.css';
-import store from './redux/store'
-console.log(store.getState())
 
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
+import Footer from './redux/Footer'
 class App extends Component {
   handleClick () {
     console.log('click')
-    store.dispatch({
-      type: 'increment',
-      counterCaption: 'First'
-    })
   }
   render() {
     return ( 
       <div className="App">
-        <Button type="primary" onClick={this.handleClick.bind(this)}>{store.getState().First}</Button>
+        {/* <Button type="primary" onClick={this.handleClick.bind(this)}>{'jjj'}</Button> */}
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer />
       </div>
     );
   }
