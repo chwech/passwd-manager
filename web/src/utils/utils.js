@@ -12,7 +12,7 @@ export function noop () {}
  */
 export function transferUrl (url, params) {
   if (Array.isArray(params)) {
-    for (param of params) {
+    for (let param of params) {
       url += `/${param}`
     }
   }
