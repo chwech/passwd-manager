@@ -35,3 +35,15 @@ export function serializeQueryStr (params, sep = '&') {
   queryString += paramsArray.join(sep)
   return queryString
 }
+
+/**
+ * 获取查询字符串某个key的value
+ * @param {String} name 某个键值对的key
+ * @returns 返回对应的value，如果获取不到，返回null
+ */
+export function getQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  var r = location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]);
+  return null;
+}
