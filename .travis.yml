@@ -5,9 +5,11 @@ env:
   global:
     secure: 2eab29e95ffb
 before_install:
+- pwd
+- ll
 - openssl aes-256-cbc -K $encrypted_2eab29e95ffb_key -iv $encrypted_2eab29e95ffb_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-- cd web
+- cd webs
 script:
 - npm run build
 after_success:
