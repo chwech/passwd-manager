@@ -38,6 +38,7 @@ export function serializeQueryStr (params, sep = '&') {
 
 /**
  * 获取查询字符串某个key的value
+ * @export
  * @param {String} name 某个键值对的key
  * @returns 返回对应的value，如果获取不到，返回null
  */
