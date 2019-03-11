@@ -16,3 +16,11 @@ CREATE TABLE IF NOT EXISTS pm_user (
   login_ip INT UNSIGNED COMMENT '登录ip',
   login_time TIMESTAMP NULL COMMENT '登录时间'
 );
+
+# 创建帐号密码表
+CREATE TABLE IF NOT EXISTS pm_account (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  account VARCHAR(255) NOT NULL COMMENT '账号',
+  password VARCHAR(255) NOT NULL COMMENT '密码',
+  update_time TIMESTAMP DEFAULT NOW() COMMENT '更新时间'
+);
