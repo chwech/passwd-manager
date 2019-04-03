@@ -1,14 +1,6 @@
-import React, {
-  Component
-} from 'react';
-import {
-  Button
-} from 'antd';
+import React, { Component } from 'react';
 import './App.css';
-
-import AddTodo from './containers/AddTodo'
-import VisibleTodoList from './containers/VisibleTodoList'
-import Footer from './redux/Footer'
+import Login from './views/login'
 class App extends Component {
   handleClick () {
     console.log('click')
@@ -16,10 +8,7 @@ class App extends Component {
   render() {
     return ( 
       <div className="App">
-        {/* <Button type="primary" onClick={this.handleClick.bind(this)}>{'jjj'}</Button> */}
-        <AddTodo />
-        <VisibleTodoList />
-        <Footer />
+        <Login></Login>
       </div>
     );
   }
