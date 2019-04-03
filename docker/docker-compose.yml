@@ -1,4 +1,4 @@
-version: "3"
+version: "3.1"
 
 services:
   lamp:
@@ -10,10 +10,10 @@ services:
       - "/home/chwech/passwd-manager/mysql-data:/var/lib/mysql"
     ports:
       - "3306:3306"
-          
-  nginx:
-    image: "nginx"
-    ports: 
-      - "80:80"
-    volumes:
-      - "/home/chwech/passwd-manager/docker/conf.d:/etc/nginx/conf.d"
+    networks:
+      - default
+      - nginx_with_others
+
+networks:
+  nginx_with_others:
+    external: true
