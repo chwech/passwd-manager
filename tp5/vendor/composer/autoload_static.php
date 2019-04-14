@@ -16,6 +16,10 @@ class ComposerStaticInit89d66f15db1c0f854ccd4b40bcfc836c
         array (
             'app\\' => 4,
         ),
+        'L' => 
+        array (
+            'Lcobucci\\JWT\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -30,6 +34,10 @@ class ComposerStaticInit89d66f15db1c0f854ccd4b40bcfc836c
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/application',
+        ),
+        'Lcobucci\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
         ),
     );
 

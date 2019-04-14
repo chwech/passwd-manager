@@ -1,17 +1,15 @@
-import React, {
-  Component
-} from 'react';
-import {
-  Button
-} from 'antd';
+import React, { Component } from 'react';
 import './App.css';
-
+import Login from './views/login'
 class App extends Component {
+  handleClick () {
+    console.log('click')
+  }
   render() {
     return ( 
       <div className="App">
-      <Button type="primary">Button</Button>
-    </div>
+        <Login></Login>
+      </div>
     );
   }
 }

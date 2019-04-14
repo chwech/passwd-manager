@@ -25,4 +25,9 @@ use think\Route;
 Route::rule('tp5/hello','index/Index/index');
 
 // 添加用户
-Route::get('/user', 'api/v1.User/addUser');
+Route::post('/user', 'api/v1.User/addUser');
+
+// 获取jwt-token
+Route::post('/token', 'api/v1.Token/getToken');
+Route::get('/', 'index/Index/index');
+// Route::miss('/');

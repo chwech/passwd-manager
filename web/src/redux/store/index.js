@@ -1,7 +1,7 @@
 import {
   createStore
 } from 'redux'
-import reducer from '../Reducer'
+import reducer from '../reducer'
 const initValue = {
   'First': 0,
   'Second': 10,
