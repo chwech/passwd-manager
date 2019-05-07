@@ -1,22 +1,17 @@
-const {
-  injectBabelPlugin
-} = require('react-app-rewired');
-const rewireLess = require('react-app-rewire-less');
 
-module.exports = function override(config, env) {
-  config = injectBabelPlugin(
-    ['import', {
-      libraryName: 'antd',
-      libraryDirectory: 'es',
-      style: true
-    }], // change importing css to less
-    config,
-  );
-  config = rewireLess.withLoaderOptions({
-    modifyVars: {
-      "@primary-color": "#1DA57A"
-    },
+const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+
+module.exports = override(
+  // 按需加载antd的组件
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    // style: 'css',
+    style: true // 使用less-loader需要改这里, 作用是什么不知
+  }),
+  // 使用less-loader
+  addLessLoader({
     javascriptEnabled: true,
-  })(config, env);
-  return config;
-};
+    modifyVars: { '@primary-color': '#1DA57A' },
+  }),
+);
